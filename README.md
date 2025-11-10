@@ -34,12 +34,13 @@ To include an IBM Verify SDK modules in your Android project, follow these steps
    In your root-level `settings.gradle.kts` add the JitPack repository:
 
     ```kotlin
-    dependencyResolutionManagement {
-        repositories {
-            // other repositories...
-            maven { url = uri("https://jitpack.io") }
-        }
-    }
+	dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			// other repositories
+			maven { url = uri("https://jitpack.io") }
+		}
+	}
     ```
 
 2. Add the SDK dependencies
@@ -48,13 +49,13 @@ To include an IBM Verify SDK modules in your Android project, follow these steps
 
     ```kotlin
     dependencies {
-        implementation("com.github.ibm-verify:verify-sdk-core:3.0.0")
-        implementation("com.github.ibm-verify:verify-sdk-<module>:<version>")
+        implementation("com.github.ibm-security-verify.verify-sdk-android:verify-sdk-core:3.0.9")
+        implementation("com.github.ibm-security-verify:verify-sdk-android:verify-sdk-<module>:<version>")
         ...
     }
     ```
 
-   Replace `version` with `main-SNAPSHOT` for the latest development snapshot. You can generate entries for other modules [here](https://jitpack.io/#ibm-verify/verify-mobile-android/).
+   Replace `version` with `main-SNAPSHOT` for the latest development snapshot. You can generate entries for other modules [here](https://jitpack.io/#ibm-verify/verify-sdk-android/).
 
 3. Sync and build
 
@@ -62,4 +63,4 @@ To include an IBM Verify SDK modules in your Android project, follow these steps
 
 ### Manually from GitHub release
 
-Download the required SDK files from https://github.com/ibm-verify/verify-mobile-android/releases/latest,  store them into the lib folder and sync your project.
+Download the required SDK files from https://github.com/ibm-verify/verify-sdk-android/releases/latest,  store them into the lib folder and sync your project.
