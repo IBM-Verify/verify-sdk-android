@@ -25,7 +25,7 @@ for example is not suitable.
 
 ## Example
 
-An [example](https://github.com/ibm-verify/verify-mobile-android/tree/main/sdk/examples/fido2)
+An [example](https://github.com/ibm-verify/verify-sdk-android/tree/main/sdk/examples/fido2)
 application is available for the Verify FIDO2 SDK for Android.
 
 ## Usage
