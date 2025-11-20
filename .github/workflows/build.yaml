@@ -290,7 +290,7 @@ jobs:
             ./sdk/IBM-Verify-SDK_*_code-coverage-report.zip
 
       - name: Upload documentation to GitHub.io repo
-        if: github.ref == 'refs/heads/main'      
+        if: false && github.ref == 'refs/heads/main'      
         uses: cpina/github-action-push-to-another-repository@v1.7.2
         env: 
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
